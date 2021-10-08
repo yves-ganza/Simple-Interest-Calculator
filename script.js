@@ -10,7 +10,7 @@ function compute()
         document.getElementById("rate_val").innerText = e.target.value + "%";
     }
 
-    rate.onchange = updateRate;
+    document.getElementById("rate").addEventListener('change', updateRate);
 
     document.querySelector("result").innerText = `
         If you deposit ${principal},
