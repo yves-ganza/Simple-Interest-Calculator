@@ -1,21 +1,105 @@
 body {
     background-color:black;
     font-family: arial; 
+    font-size: 1rem;
+    line-height: 1.25 rem;
     color: white;
 }
 
 h1{
     color:gray;
     font-family: verdana;
+    text-align: center;
+    padding: 1rem .5rem;
+}
+
+#result {
+    padding: .5rem 1rem;
 }
 
 .main-div {
-    background-color: #ffffff;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 36px #bebebe,
+                -5px -5px 36px #ffffff;
     color: #000;
-    width: 300px;
-    padding: 20px;
+    width: 100%;
+    max-width: 650px;
     border-radius: 25px;
-    margin: auto auto;
+    margin: 1rem auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .main-div {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    main {
+        margin-left: 0;
+    }
 }
 
 
+
+input, select {
+    margin-left: 20px;
+    padding: 4px;
+    border: 2px solid black;
+    display: inline;
+}
+
+.input-wrapper {
+    padding: .57rem 1rem;
+}
+
+label {
+    padding: 4px 0px;
+}
+
+
+footer {
+    padding: 20px 10px 5px;
+}
+
+button {
+    /* Variables */
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #000000;
+   font-size: 17px;
+   font-weight: bold;
+   border: none;
+   margin: 1rem;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+   cursor: pointer;
+  }
+  
+  .button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+   transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+   transform: translateY(0);
+  }

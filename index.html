@@ -1,36 +1,53 @@
-<html>
+ <!DOCTYPE html>
+<html lang="en">
     <head>
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <title>Interest Calculator</title>
     </head>
     <body>
         <div class="main-div">
-            <h1>Simple Interest Calculator</h1>
+            <h1 id="header">Simple Interest Calculator</h1>
+            <main>
 
-            Amount <input type="number"  id="principal">  <br/>
+                <div class="input-wrapper">
+                    <label f0or="principal">Amount</label>
+                    <input type="number" min="0" id="principal">
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="rate">Interest Rate</label>
+                    <input type="range"  id="rate" min="1" max="20" step=".25" value="10.25">
+                    <span id="rate_val">10.25%</span>
+                </div>
 
-            Rate <input type="range"  id="rate" min="1" max="20" step=".25" value="10.25">
-            <span id="rate_val">10.25%</span><br/>
-
-            No. of Years 
-            <select id="years">
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-                <option value="4"></option>
-                <option value="5"></option>
-                <option value="6"></option>
-                <option value="7"></option>
-                <option value="8"></option>
-                <option value="9"></option>
-                <option value="10"></option>
-            </select>
-
-            Interest : <span id="result"></span><br>  
-
-            <button onclick="compute()">Compute Interest</button>
-            
-            <span id="result"></span> <br>
+                <div class="input-wrapper">
+                    <label for="years">No. of Years</label>
+                    <select id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="compute-btn">
+                        <span class="button_top">
+                            Compute Interest
+                        </span>
+                    </button>
+                </div>
+                <span id="result"></span>
+            </main>
             <footer>
                 &#169; This Calculator belongs to YG
             </footer>
