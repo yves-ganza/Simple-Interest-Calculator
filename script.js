@@ -5,6 +5,7 @@ function compute()
 
     if(principal < 1){
         alert('Please enter an amount greater than 0');
+        document.getElementById("principal").focus = true;
         return
     }
     const rate = document.getElementById("rate").value;
