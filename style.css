@@ -46,7 +46,9 @@ main {
     }
 }
 
-
+.bg-yellow {
+    background-color: yellow;
+}
 
 input, select {
     margin-left: 20px;
