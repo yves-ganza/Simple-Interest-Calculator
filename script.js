@@ -5,7 +5,7 @@ function compute()
 
     if(principal < 1){
         alert('Please enter an amount greater than 0');
-        document.getElementById("principal").focus = true;
+        document.getElementById("principal").focus();
         return
     }
     const rate = document.getElementById("rate").value;
@@ -19,7 +19,7 @@ function compute()
         in the year ${year}
     `
 
-    document.getElementById("principal").focus = true;
+    document.getElementById("principal").focus();
 }
 
 const updateRate = (e) => {
