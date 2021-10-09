@@ -2,6 +2,11 @@
 function compute()
 {
     const principal = document.getElementById("principal").value;
+
+    if(principal < 1){
+        alert('Please enter an amount greater than 0');
+        return
+    }
     const rate = document.getElementById("rate").value;
     const years = document.getElementById("years").value;
     const interest = principal * years * rate/100;
